@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Loader</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* 
+    CSS Loader styling starts here
+     */
+
+    .loader {
+      --size: 10rem;
+      --thickness: 2rem;
+      --color: white;
+      --timing: 1s;
+      width: var(--size);
+      height: var(--size);
+      border: var(--thickness) solid var(--color);
+      border-right-color: transparent;
+      border-radius: 50%;
+      animation: loading var(--timing) infinite linear;
+    }
+
+    @keyframes loading {
+      to {
+        transform: rotate(1turn);
+      }
+    }
+  </style>
+  <body>
+    <div class="loader"></div>
+  </body>
+</html>
