@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>hover link transition</title>
+  </head>
+  <style>
+    /* general styling */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-size: 5rem;
+      background: #282a36;
+    }
+
+    /* tutorial styling starts here */
+
+    .link {
+      --mainColor: #6272a4;
+      --height: 30%;
+      color: #f8f8f2;
+      text-decoration: none;
+      background: linear-gradient(
+        to bottom,
+        var(--mainColor) 0%,
+        var(--mainColor) 100%
+      );
+      background-position: 0 100%;
+      background-repeat: repeat-x;
+      background-size: var(--height) var(--height);
+      transition: background-size 150ms ease-out;
+    }
+
+    .link:hover {
+      background-size: var(--height) 100%;
+    }
+  </style>
+  <body>
+    <a href="" class="link">blamemycode</a>
+  </body>
+</html>
